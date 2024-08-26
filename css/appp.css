@@ -1,0 +1,493 @@
+@import url('https://fonts.googleapis.com/css2?family=Andika&display=swap');
+
+*{
+	font-family: 'Andika', sans-serif;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+/*################TEMA DE CULOARE###############################################################################*/
+:root {
+	--culoare-alb: white;
+	--culoare-negru: rgb(43, 43, 43);
+	--culoare-alb-gri: rgb(254, 254, 254);
+	--culoare-gri: grey;
+	--culoare-bara: white;
+	--culoare-iconita: grey;
+	--culoare-umbra: lightgrey;
+	--culoare-bordura: rgb(190, 190, 190);
+	--culoare-capitole: grey;
+	--culoare-capitole-fundal: rgb(233, 233, 233);
+	--culoare-load: rgb(213, 137, 246);
+	--culoare-link: rgb(124, 61, 179);
+	--culoare-fundal-contact: rgb(255, 249, 209);
+	--culoare-tabel: rgb(213, 137, 246);
+}
+
+.tema-intunecata {
+	--culoare-alb: rgb(43, 43, 43); 
+	--culoare-negru: white;
+	--culoare-alb-gri: rgb(67, 67, 67);
+	--culoare-gri: grey;
+	--culoare-bara: rgb(103, 103, 103);
+	--culoare-iconita: lightgrey;
+	--culoare-umbra: black;
+	--culoare-bordura: black;
+	--culoare-capitole: rgb(255, 255, 255);
+	--culoare-capitole-fundal: rgb(43, 43, 43);
+	--culoare-load: rgb(43, 43, 43);
+	--culoare-link: rgb(255, 234, 98);
+	--culoare-fundal-contact: rgb(35, 29, 41);
+	--culoare-tabel: rgb(33, 26, 37);
+}
+
+.tema-culoare {
+	background-color: var(--culoare-alb);
+}
+
+.culoare-card {
+	background-color: var(--culoare-alb-gri);
+}
+
+.culoare-scris {
+	color: var(--culoare-negru);
+	font-family: 'Andika', sans-serif;
+}
+
+.culoare-scris-nimic {
+	color: var(--culoare-gri);
+	font-family: 'Andika', sans-serif;
+}
+
+.cauta {
+	background-color: var(--culoare-bara);
+	border-radius: 5000px;
+	color: var(--culoare-negru);
+}
+
+.cauta:focus{
+	background-color: var(--culoare-bara);
+	
+}
+
+.secondary {
+	border-color: var(--culoare-iconita) !important;
+	border-radius: 50px;
+}
+
+.culoare-iconita {
+	color: var(--culoare-iconita);
+}
+
+.textarea {
+	background-color: var(--culoare-alb-gri);
+	color: var(--culoare-negru);
+	border: none;
+	border-radius: 10px;
+	box-shadow: none;
+	padding: 10px; 
+	resize:none;
+	cursor: pointer;
+}
+
+.textarea:focus{
+	background-color: var(--culoare-alb-gri);
+	border-radius: 10px;
+	border-color: lightgray;
+	box-shadow: none;
+	cursor:auto;
+}
+
+.textarea:hover{
+	border-color: lightgray;
+}
+
+/*##############BARA DE NAVIGARE#################################################################################*/
+
+.title-bar {
+	background: var(--culoare-alb);	
+}
+
+.title-bar-title {
+	color: var(--culoare-negru);
+}
+
+.top-bar, 
+.top-bar ul {
+	max-height: 60px;
+	background-color: var(--culoare-alb);
+}
+
+.bordura-nav {
+	border-bottom: 1px solid lightgrey;
+}
+
+.culoare_meniu_capitole {
+	background-color: var(--culoare-alb) !important;	
+}
+
+/*luat din framework*/
+
+@media screen and (max-width: 39.9375em) { 
+	.no-js .top-bar {
+	  display: none;
+	}
+  }
+  
+  @media print, screen and (min-width: 40em) {
+	.no-js .title-bar {
+	  display: none;
+	}
+  }
+  
+  [data-sticky] {
+	width: 100%;
+  }
+  
+  .sticky-container {
+	z-index: 5;
+  }
+
+/*luat din framework*/
+
+/*###############################################################################################*/
+
+.culoare-umbra-cell {
+	box-shadow: 0 0 10px var(--culoare-bordura);
+}
+
+.scrollbox {
+	max-width: 900px;
+	max-height: 650px;
+	margin: auto;
+	overflow-y: auto;
+
+	padding: 20px;
+	padding-bottom: 0px;
+}
+
+.scrollboxcard {
+	overflow-y: auto;
+}
+
+/*########CARTI PAGINA USERHOME#######################################################################################*/
+
+.carusel {
+	max-width: 1050px;
+	margin: auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: flex;
+	overflow-x: auto;
+	overflow-y: hidden;
+	overscroll-behavior-inline: contain;
+}
+
+.carusel-card {
+	min-width: 200px;
+	height: 320px;
+	margin: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition:transform 0.5s;
+}
+
+.carusel-card:hover {
+	transform:scale(1.1);
+}
+
+.coperti {
+	float: center;
+	min-width: 175px;
+	height: 280px;
+	border-radius: 10px;
+	padding-bottom: 7px;
+}
+
+/*###############################################################################################*/
+
+.asezare {
+	max-width: 900px;
+	margin: auto;
+	padding: 20px;
+}
+
+.rotund {
+	clip-path: circle();
+	overflow: hidden;
+}
+
+/*#########BARA DE SCROLL######################################################################################*/
+
+div::-webkit-scrollbar {
+	width: 5px;
+}
+
+div::-webkit-scrollbar-thumb {
+	background: grey;
+	border-radius: 10px;
+}
+
+
+.carusel::-webkit-scrollbar {
+	/*display: none;*/
+	height: 8px;
+}
+
+/*#########BARA DE SCROLL######################################################################################*/
+
+.reveal {
+	background-color: var(--culoare-bara);
+	border-color: var(--culoare-bara);
+}
+
+a {
+	color: var(--culoare-negru);
+}
+
+a:hover {
+	color: var(--culoare-link);
+}
+
+.butonok,
+.butonok:focus {
+	background: rgb(213, 137, 246);
+	border-radius: 100px;
+}
+
+.butonok:hover{
+	background: rgb(163, 105, 181);  /* rgb(199, 113, 208); - mov deschis*/
+}
+
+.butong,
+.butong:hover,
+.butong:focus  {
+	color: rgb(213, 137, 246);
+	background: rgb(255, 234, 98);
+	border-radius: 50px;
+}
+
+.butont,
+.butont:hover {
+	color: white;
+	background: transparent;
+	border-color: white;
+	border-radius: 10px;
+}
+
+.butoncapitole,
+.butoncapitole:hover {
+	color: var(--culoare-capitole);
+	background-color: var(--culoare-alb);
+	border-radius: 10px;
+	border-color: grey; 
+}
+
+.butoncard,
+.butoncard:hover {
+	width: 49%;
+	color: var(--culoare-capitole);
+	background-color: var(--culoare-capitole-fundal);
+	border-radius: 10px;
+	border-color: grey; 
+	box-shadow: 0 0 10px var(--culoare-bordura);
+}
+
+.active {
+	background-color: var(--culoare-alb-gri) !important;
+	color: var(--culoare-capitole) !important;
+}
+
+.link {
+	color: rgb(255, 224, 21); 
+}
+
+.link:hover {
+	color: white;
+}
+
+/*fundal pentru login si register*/
+.fundal-gradient {
+	background: rgb(213, 137, 246);
+	/*background-size: 300% 300%;
+	animation: color 12s ease-in-out infinite;*/
+}
+
+/*  In caz ca vreau animatia cu gradient
+@keyframes color{
+	0%{
+		background-position: 0 50%;
+	}
+	50%{
+		background-position: 100% 50%;
+	}
+	100%{
+		background-position: 0 50%;
+	}
+}
+*/
+
+/*sfarsit fundal pentru login si register*/
+
+.fundal-contact {
+	background: var(--culoare-fundal-contact);
+}
+
+.card {                        /*CSS carduri produse*/
+	height: 500px;
+	border-radius: 10px;
+	border-color: gray;
+}
+
+.star i {
+	font-size: 10px;
+	color: rgb(255, 236, 116);
+} 
+
+.card-section {
+	cursor: pointer;
+}
+
+.product-card-sale {
+  color: gray;
+  text-decoration: line-through;
+}
+
+.bordura {
+	border: 1px;
+	border-radius: 10px;
+	border-color: gray;
+}
+
+.bordura-profil {
+	border: 2px;
+	border-radius: 50px;
+	border-color: grey;
+}
+
+.text-centru {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.ascuns {
+	display: none;
+}
+
+.dimensiune-capitol {
+	font-size: 50px;
+}
+
+.dimensiune-continut {
+	font-size: 20px;
+}
+
+@media (max-width: 991px) {
+	.dimensiune-capitol {
+		font-size: 30px;
+	}
+	.dimensiune-continut {
+		font-size: 15px;
+	}
+}
+
+#preloader {
+	background: var(--culoare-load) url(../img/loader.gif) no-repeat center center;
+	background-size: 16%;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: 100;
+}
+
+/*#########PENTRU PAROLA######################################################################################*/
+
+.parola-container{
+	position: relative;
+}
+
+.password + .vizibilitate{
+	position: absolute;
+	right: 12px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+		cursor: pointer;
+	border: none;
+}
+
+.vizibilitate{
+	margin: 0 10px;
+	color: #aaa;
+}
+
+.animatie img{
+	transition:transform 0.5s;
+}
+
+.animatie img:hover {
+	transform:scale(1.1);
+}	
+
+/*#########REVIEW######################################################################################*/
+
+.culoare-radio{
+	padding: 5px 10px;
+	font-size: 15px;
+	cursor: pointer;
+	background-color: lightgrey;
+	border-radius: 10px; 
+}
+
+#rad-1:checked ~ .label-1,
+#rad-2:checked ~ .label-2
+{
+	background-color: var(--culoare-load);
+}
+
+/*CSS pentru tabele*/
+
+.tabel_cap {
+	border: 1px solid var(--culoare-tabel);
+	background: var(--culoare-tabel); 
+	height:50px; 
+	position:sticky; 
+	top:0;
+}
+
+table, td {
+	border: 1px solid var(--culoare-tabel);
+	border-collapse: collapse;
+  }
+  
+td {
+	text-align: center;
+	background-color: var(--culoare-alb-gri);
+  }
+
+/*#########VALIDARE FORMULARE######################################################################################*/
+
+.form-control small{
+	display: none;
+    margin-bottom:15px;
+    color:#b32c2c;
+ }
+
+ .form-control.eroare small{
+	display: block;
+ }
+
+ .form-control.eroare input{
+	border-color: #b32c2c !important;
+ }
+
+
+
+
